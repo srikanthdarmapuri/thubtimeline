@@ -1,0 +1,118 @@
+.thomln-form{
+    /*border: 1px solid #cccccc;*/
+    padding-top: 30px;
+    padding-left: 50px;
+}
+.thomln-form p{
+    line-height: 0;
+}
+.tmln-input{
+    margin-bottom: 20px !important;
+    width: 60%;
+    height: 5% !important;
+    display: block;
+    border-radius: 0 !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow:none !important;
+    box-shadow: none !important; 
+}
+.btn{
+background-color: white !important;
+border: 1px solid #FF7171 !important;
+color: #FF7171 !important;
+}
+.form-img{
+    width: 60%;
+    border: 1px solid #9E8C8C;
+    height: 200px !important;
+    cursor: pointer;
+}
+.form-img:hover i{
+    opacity: 0.5;
+}
+.form-img i{
+position: absolute;
+margin-top: 74px;
+margin-left: 120px;
+font-size: 3em;
+background-position: 130px;
+}
+.form-img i:hover{
+    opacity: 0.7;
+}
+.form-img .select-img{
+opacity: 1;
+position: absolute;
+width: 70px;
+margin-top: 100;
+margin-top: 80px;
+margin-left: 105px;
+opacity: 0;
+z-index: 1;
+
+}
+.img-prvw{
+    display: none;
+    position: relative;
+}
+.img-prvw img{
+    width: 100%;
+    height: 198px ;
+}
+.chng-img{
+font-family: 'Gentium Basic', serif;
+font-size: 1.2em !important; 
+line-height: 1.6285em;
+position: absolute;
+cursor: pointer;
+bottom: 4px;
+/*right: 4px;*/
+font-size: 1em;
+color: #FBFBFB;
+padding: 0px 6px;
+z-index: 10;
+}
+.chng-img:hover{
+    color: white;
+}
+.icon-calendar{
+    font-size: 2em;
+    background-position: 40px !important;
+    cursor: pointer;
+    margin-top: -15px !important;
+    color: #FF5252;
+}
+.ui-datepicker-trigger{
+    margin-top: -20px;
+    margin-left: 5px;
+    max-width: 22px;
+    cursor: pointer;
+}
+.ui-datepicker-trigger:hover{
+    opacity: 0.8 !important;
+}
+#tmln-bx{
+    height: 350px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(../timline.png);
+    background-repeat: no-repeat;
+}
+.flag-item{
+    float: left;
+    padding-left: 10px;
+}
+#flag{
+margin-left: 15%;
+margin-top: 20px;
+padding-bottom: 43px;
+}
+.popover-title{
+    text-transform: capitalize;
+    font-size: 1.32em !important;
+}
+.popover-date{
+    font-style:italic;
+    font-size: 0.716em;
+}

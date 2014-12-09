@@ -4,53 +4,48 @@
     <meta charset="utf-8">
     <title>THUB Timeline</title>
     
-
-    <link rel="stylesheet" type="text/css" href="/css/jquery.datetimepicker.css"/ >
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="/js/jquery.datetimepicker.js"></script>
+    
     <link rel="stylesheet" href="/css/thubtimeline.css">
-
-    <script>
-	  $(function() {
-	    jQuery('.datetimepicker').datetimepicker();
-	  });
-	</script>
+    <link rel="stylesheet" href="/css/timeline.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/saddahaq.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="/bootstrap/css/saddahaq-ie7.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
   </head>
 
   <body>
 
   <h3>Add a new timeline event/activity</h3>
-  <form>
-	  <input type="text" placeholder="Title of Event/Activity" id="newtm-ttl" name="newtm-ttl"/>
-	  <textarea rows= "3" id ="newtm-desc" name="newtm-desc" class="input-xxlarge block" style="margin : 8px auto 
-	  8px;" placeholder="Brief description.."></textarea>
-	  <input class="datetimepicker" type="text" id="newtm-time"> 
-	  
-     <!-- <div class="inline-image editor-block" id="ib-">
-         <ul class="editor-options">
-           <li class="hideElement"><a href="#" id="con-del" role="btn" data-toggle="modal"><i class="icon-trash-can" title="Delete image"></i></a></li>
-         </ul>
-         <div class="img-holder no-bdr">
-           <form name="image-upload" id="imageUpload" class="image-upload" method="post" enctype="multipart/form-data" action="' . API . '/uimg' . '">
-           <div class="slct-pic"><input type="file" name="image-file[]" class="image-file" multiple="">
-               <i class="icon-add-image transition in"></i>
-           </div>
-           </form>
-            <div class="preview span16" id="pw-ib-"><p>Upload JPG, PNG or GIF image.</p>
-            <progress value="0" max="100" class="img-prgs red"></progress>
-            </div>
-         </div>
-     </div> -->
+  <div class="thomln-form span7">
+      <form id="myForm">
+      <p>Title:</p>
+      <input type="text" placeholder="Title of Event/Activity" id="newtm-ttl" name="newtm-ttl" class="tmln-input tmln-title"/>
+      <p>Description:</p>
+      <textarea rows= "3" id ="newtm-desc" name="newtm-desc" class="block tmln-input tmln-desc" placeholder="Brief description.."></textarea>
+      <p>Date:</p>
+      <input class="datetimepicker tmln-input tmln-date" type="text" id="newtm-time">
+      <!-- <div class="form-img"><input type="file" id="add-img" class="select-img"><i class="icon-add-image"></i><div class="img-prvw"><p>Change Image</p><img src=""></div></div> -->
+        
+     <div class="form-img" >
+           <input type="file" id="add-img" class="select-img"><i class="icon-add-image"></i><div class="img-prvw"><p>Change Image</p><img src=""></div>
+     </div>
 
       <p class="err-msg"></p>
-	  <input type="submit" id="newtm-add" value="Add">
-
-
   </form>
+  <button class="btn btn-info" id="newtm-add">Add</button>
+  
+  </div>
 
+  <div id="container"></div>
+  <div class="clearfix"></div>
+  
   </body>
  
   <script src="/js/d3.js"></script>
+  <script src="/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/bootstrap/js/jquery-ui.min.js"></script>
   <script src="/js/thubtimeline.js"></script>
 </html>

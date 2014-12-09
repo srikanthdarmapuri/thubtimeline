@@ -1,22 +1,29 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 svg {
+  background: url(../road.jpg);
   font: 14px 'Open Sans';
+background-size: 100% 100%;
+
 }
 
 .axis path,
 .axis line {
   fill: none;
-  stroke: #000;
+  stroke: white;
   shape-rendering: crispEdges;
 }
-
+.x.axis {
+  display: none;
+}
 .axis text {
-  fill: #000;
+  fill: white;
+  stroke-width : 2;
 }
 
 .axis .tick line {
-  stroke: rgba(0, 0, 0, 1);
+  stroke: white;
+  stroke-width : 2;
 }
 
 .area {
@@ -25,8 +32,9 @@ svg {
 
 .area.outer,
 .legend .outer {
-  fill: rgba(230, 230, 255, 0.8);
-  stroke: rgba(216, 216, 255, 0.8);
+  fill: #545457;
+  stroke: #222227;
+  stroke-width: 8px;
 }
 
 .area.inner,
@@ -38,125 +46,22 @@ svg {
 .median-line,
 .legend .median-line {
   fill: none;
-  stroke: #000;
-  stroke-width: 3;
+  stroke: white;
+  stroke-width: 0;
 }
 
-.legend .legend-bg {
-  fill: rgba(0, 0, 0, 0.5);
-  stroke: rgba(0, 0, 0, 0.5);
-}
 
-.marker.c1 .marker-bg,
-.marker.c1 path {
+.marker.c .marker-bg,
+.marker.c path {
   fill: rgba(255, 127, 0, 0.8);
   stroke: rgba(255, 127, 0, 0.8);
   stroke-width: 3;
 }
 
-.marker.c2 .marker-bg,
-.marker.c2 path {
-  fill: rgba(0, 153, 51, 0.8);
-  stroke: rgba(0, 153, 51, 0.8);
-  stroke-width: 3;
-}
-
-.marker.c3 .marker-bg,
-.marker.c3 path {
-  fill: #F27935;
-  stroke: #F27935;
-  stroke-width: 3;
-}
-
-.marker.c4 .marker-bg,
-.marker.c4 path {
-  fill: rgba(0, 153, 51, 0.8);
-  stroke: rgba(0, 153, 51, 0.8);
-  stroke-width: 3;
-}
-
-.marker.c5 .marker-bg,
-.marker.c5 path {
-  fill: rgba(255, 127, 0, 0.8);
-  stroke: rgba(255, 127, 0, 0.8);
-  stroke-width: 3;
-}
-
-.marker.c6 .marker-bg,
-.marker.c6 path {
-  fill: rgba(0, 153, 51, 0.8);
-  stroke: rgba(0, 153, 51, 0.8);
-  stroke-width: 3;
-}
-
-.marker.c7 .marker-bg,
-.marker.c7 path {
-  fill: rgba(255, 127, 0, 0.8);
-  stroke: rgba(255, 127, 0, 0.8);
-  stroke-width: 3;
-}
-
-.marker.c8 .marker-bg,
-.marker.c8 path {
-  fill: rgba(0, 153, 51, 0.8);
-  stroke: rgba(0, 153, 51, 0.8);
-  stroke-width: 3;
-}
-
-
-.marker.c9 .marker-bg,
-.marker.c9 path {
-  fill: rgba(255, 127, 0, 0.8);
-  stroke: rgba(255, 127, 0, 0.8);
-  stroke-width: 3;
-}
-
-.marker.c10 .marker-bg,
-.marker.c10 path {
-  fill: rgba(0, 153, 51, 0.8);
-  stroke: rgba(0, 153, 51, 0.8);
-  stroke-width: 3;
-}
-
-.marker.c11 .marker-bg,
-.marker.c11 path {
-  fill: rgba(255, 127, 0, 0.8);
-  stroke: rgba(255, 127, 0, 0.8);
-  stroke-width: 3;
-}
-
-.marker.c12 .marker-bg,
-.marker.c12 path {
-  fill: rgba(0, 153, 51, 0.8);
-  stroke: rgba(0, 153, 51, 0.8);
-  stroke-width: 3;
-}
 
 .green, .selected {border-color: #1FBBA6 !important;}
 i.selected {color : #1FBBA6 !important;}
 
-.tec:hover, .tec.hvrd {background: #F4E04E; color : #232931 !important; border-color: #F4E04E;}
-.Technology-i, .technology-i {color : #F4E04E;}
-.spo:hover, .spo.hvrd {background: #00AFD1; border-color : #00AFD1;}
-.sports-i {color : #00AFD1;}
-.pag:hover, .pag.hvrd, .ent:hover , .ent.hvrd {background: #EF1824; border-color: #EF1824;}
-.entertainment-i {color : #EF1824;}
-.hum:hover, .hum.hvrd {background: #016FC5; border-color: #016FC5;}
-.humaninterest-i {color : #016FC5;}
-.lif:hover, .lif.hvrd {background: #C30358; border-color : #C30358;}
-.lifestyle-i {color : #C30358;}
-.bus:hover, .bus.hvrd {background : #DAA520; border-color: #DAA520;}
-.business-i {color : #DAA520;}
-.sci:hover, .sci.hvrd {background: #49a88f; border-color: #49a88f;}
-.science-i {color : #49a88f;}
-.education-i {color :#793541;}
-.edu:hover, .edu.hvrd {background: #793541; border-color : #793541;}
-.environment-i {color : #7ca90a;}
-.env:hover, .env.hvrd {background: #7ca90a; border-color : #7ca90a;}
-.for:hover, .for.hvrd {background: #8B4513; border-color : #8B4513;}
-.foreignaffairs-i {color: #8B4513;}
-.multiple-i, .all-i {color : #1FBBA6;}
-.grey {border-color : #65727C;}
 
 
 .marker path {
@@ -170,8 +75,17 @@ i.selected {color : #1FBBA6 !important;}
 }
 
 .marker text {
-  text-anchor: middle;
+  text-anchor: start;
 }
+#y-axis{
+  visibility: hidden;
+}
+.marker.c text{
+  cursor : pointer;
+  pointer-events: none;
+}
+
+/* end of d3 svg css */
 
 .thomln-form{
     /*border: 1px solid #cccccc;*/
@@ -265,4 +179,16 @@ z-index: 10;
 }
 .ui-datepicker-trigger:hover{
     opacity: 0.8 !important;
+}
+.popover-title{
+    text-transform: capitalize;
+    font-size: 1.32em !important;
+}
+.popover-date{
+    font-style:italic;
+    font-size: 0.716em;
+}
+.popover-content img{ 
+margin: auto;
+width: 96%;    
 }

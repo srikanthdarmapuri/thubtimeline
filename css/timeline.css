@@ -116,3 +116,7 @@ padding-bottom: 43px;
     font-style:italic;
     font-size: 0.716em;
 }
+.popover-content img{ 
+margin: auto;
+width: 96%;    
+}
